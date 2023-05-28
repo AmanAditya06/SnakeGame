@@ -19,11 +19,11 @@ var headphoneElement = document.getElementById('headphone-icon');
 let eatFoodSound=new Audio("resources/eat-food.mp3");
 let gameOverSound = new Audio("resources/game-over.mp3");
 let gameBonusSound = new Audio("resources/game-bonus.mp3");
-let snake = [{x: 200, y: 200}];
+let snake = [{x: 40, y: 200}];
 let direction = "right";
 let food = {x: 0, y: 0};
 let lastRenderTime = 0;
-let speed = 150; // Speed control (milliseconds)
+let speed = 200; // Speed control (milliseconds)
 let score = 0;
 let highScore = getHighScoreFromLocalStorage(); // Retrieve the high score from local storage
 draw();
@@ -109,7 +109,7 @@ function checkFoodCollision() {
     if (head.x === food.x && head.y === food.y) {
     eatFoodSound.play();
     score++;
-    speed-=(speed/(150+score))*score;
+    speed-=(speed/(200+score))*score;
     updateScore();
     generateFood();
     return true;
@@ -150,7 +150,7 @@ function checkCollision() {
 
 function gameOver() {
     isGameOver = true;
-    speed=150;
+    speed=200;
 if (score > highScore) {
     highScore = score;
     updateHighScore();
@@ -159,7 +159,7 @@ if (score > highScore) {
     disappoint();
     pauseIcon.style.display = "block";
     isPaused=true;
-    snake = [{x: 200, y: 200}];
+    snake = [{x: 40, y: 200}];
     direction = "right";
     generateFood();
     score = 0;
@@ -257,23 +257,27 @@ moonElement.addEventListener('click', function() {
     sunElement.style.display='block';
 });
 
+const btnUpElement = document.getElementById("btn-up");
+const btnDownElement = document.getElementById("btn-down");
+const btnRightElement = document.getElementById("btn-right");
+const btnLeftElement = document.getElementById("btn-left");
 
-document.getElementById("btn-up").addEventListener("click", function(){
+btnUpElement.addEventListener("click", function(){
     if (direction !== "down") {
         direction = "up";
     }
 });
-document.getElementById("btn-down").addEventListener("click",function(){
+btnDownElement.addEventListener("click",function(){
     if (direction !== "up") {
         direction = "down";
     }
 });
-document.getElementById("btn-left").addEventListener("click", function(){
+btnLeftElement.addEventListener("click", function(){
     if (direction !== "right") {
         direction = "left";
     }
 });
-document.getElementById("btn-right").addEventListener("click", function(){
+btnRightElement.addEventListener("click", function(){
     if (direction !== "left") {
         direction = "right";
     }

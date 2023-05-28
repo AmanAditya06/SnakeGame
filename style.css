@@ -56,7 +56,7 @@ body {
 .pause-icon {
     position: absolute;
     right: 50%;
-    bottom: 55%;
+    bottom: 53%;
     transform: translate(50%, 50%);
     font-size: 40px;
     color: rgb(93 113 78 / 77%);
