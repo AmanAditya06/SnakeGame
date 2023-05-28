@@ -7,27 +7,51 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="game-container">
-    <h1>
-      <img class="snake-mascot" src="resources/snake-mascot.png" alt="Snake Mascot">
-      Snake Game
-    </h1>
-    <div id="game-board"></div>
-    <!--i id="pause-icon" class="fas fa-play pause-icon"></i-->
-    <!-- Add pause icon -->
-    <div id="pause-icon" class="pause-icon">
-        <span class="material-symbols-outlined">
-            play_circle
-        </span>
+  <div id="disappointment">
+    <div id="gameover">Game Over!</div>
+    <div id="finalscore">Score: 0</div>
+    <div class="button" id="btn-replay"><i class="fas fa-redo-alt"></i></div>
+  </div>
+  <div class="body">
+    <div class="mode">
+      <i id="sun-icon" class="fas fa-sun mode-icon"></i>
+      <i id="moon-icon" class="fas fa-moon mode-icon"></i>
     </div>
-    <div id="scoreboard">
-      <div>
-        <span id="score-label">Score:</span>
-        <span id="score">0</span>
+    <div id="game-container">
+      <h1>
+        <img class="snake-mascot" src="resources/snake-mascot.png" alt="Snake Mascot">
+        Snake Game
+      </h1>
+      <div id="game-board"></div>
+      <!--i id="pause-icon" class="fas fa-play pause-icon"></i-->
+      <!-- Add pause icon -->
+      <div id="pause-icon" class="pause-icon">
+          <span class="material-symbols-outlined">
+              play_circle
+          </span>
       </div>
-      <div>
-        <span id="high-score-label">High Score:</span>
-        <span id="high-score">0</span>
+      <div id="scoreboard">
+        <div>
+          <span id="score-label">Score:</span>
+          <span id="score">0</span>
+        </div>
+        <div>
+          <span id="high-score-label">High Score:</span>
+          <span id="high-score">0</span>
+        </div>
+      </div>
+      <div class="button-container">
+        <div id="headphone-icon" class="button"><i class="fas fa-headphones-simple"></i></div>
+        <div class="button" id="btn-left"><i class="fas fa-arrow-left"></i></div>
+        <div class="updown-button">
+          <div class="button" id="btn-up"><i class="fas fa-arrow-up"></i></div>
+          <div class="button" id="btn-down"><i class="fas fa-arrow-down"></i></div>
+        </div>
+        <div class="button" id="btn-right"><i class="fas fa-arrow-right"></i></div>
+        <div class="pauseplay-button">
+          <div class="button" id="btn-play"><i class="fas fa-play"></i></div>
+          <div class="button" id="btn-pause"><i class="fas fa-pause"></i></div>
+        </div>
       </div>
     </div>
   </div>

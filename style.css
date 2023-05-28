@@ -1,14 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Pangolin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pacifico&family=Pangolin&family=Press+Start+2P&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
 /* CSS styles */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+    background-color: white;
     font-family: Arial, sans-serif;
+}
+
+.body{
+    display: flex;
+}
+
+.mode{
+    right: 51px;
+    top: 51px;
+    position: absolute;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+#sun-icon{
+    color: white;
+    display: none;
+}
+
+#moon-icon{
+    color: black;
+    display: block;
 }
 
 #game-container {
@@ -31,12 +55,16 @@ body {
 
 .pause-icon {
     position: absolute;
-top: 46%;
-left: 48%;
-transform: translate(50%, 50%);
-font-size: 40px;
-color: rgb(93 113 78 / 77%);
-z-index: 2;
+    right: 50%;
+    bottom: 55%;
+    transform: translate(50%, 50%);
+    font-size: 40px;
+    color: rgb(93 113 78 / 77%);
+    z-index: 2;
+}
+
+.material-symbols-outlined {
+    font-size: 33px;
 }
 
 .snake-dot {
@@ -114,3 +142,83 @@ h1 {
     transform: scale(1.2);
     }
 }
+
+#disappointment{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gameover{
+    font-size: 36px;
+    color: #e90d0d;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#finalscore{
+    font-size: 26px;
+    color: green;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#btn-replay{
+    margin: 20px;
+    color: white;
+    background-color: rgb(41, 41, 254);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    align-items: center;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .updown-button{
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      height: 120px;
+  }
+
+  .pauseplay-button{
+    display: flex;
+    flex-direction: row;
+  }
+
+  #btn-play{
+    display: flex;
+  }
+
+  #btn-pause{
+    display: none;
+  }
+
+  #headphone-icon{
+    font-weight: 25px;
+    color: blue;
+  }
