@@ -181,7 +181,7 @@ h1 {
 .button-container {
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 355px;
     align-items: center;
   }
 
@@ -198,11 +198,17 @@ h1 {
     cursor: pointer;
   }
 
+  .arrow{
+    width: 70px;
+    height: 70px;
+    font-size: 31px;
+  }
+
   .updown-button{
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-direction: column;
-      height: 120px;
+      height: 150px;
   }
 
   .pauseplay-button{
