@@ -9,6 +9,10 @@ const boardSize = 400;
 const bodyElement = document.body;
 const sunElement = document.getElementById("sun-icon");
 const moonElement = document.getElementById("moon-icon");
+const btnUpElement = document.getElementById("btn-up");
+const btnDownElement = document.getElementById("btn-down");
+const btnRightElement = document.getElementById("btn-right");
+const btnLeftElement = document.getElementById("btn-left");
 const pauseBtnElement = document.getElementById("btn-pause");
 const playBtnElement = document.getElementById("btn-play");
 var myElement = document.getElementById('disappointment');
@@ -57,7 +61,7 @@ function gameLoop(currentTime) {
     return;
     }
     bgMusic.play();
-    speed+=0.1;
+    speed+=score/100;
     highScore = getHighScoreFromLocalStorage(); // Retrieve the high score from local storage
     lastRenderTime = currentTime;
     update();
@@ -256,11 +260,6 @@ moonElement.addEventListener('click', function() {
     moonElement.style.display='none';
     sunElement.style.display='block';
 });
-
-const btnUpElement = document.getElementById("btn-up");
-const btnDownElement = document.getElementById("btn-down");
-const btnRightElement = document.getElementById("btn-right");
-const btnLeftElement = document.getElementById("btn-left");
 
 btnUpElement.addEventListener("click", function(){
     if (direction !== "down") {
