@@ -306,8 +306,8 @@ var c=1;
 headphoneElement.addEventListener('click', function(){
     if(c===1){
         headphoneElement.style.color='grey';
-        bgMusic=Silence;
         bgMusic.pause();
+        bgMusic=Silence;
         c=2;
     }
     else{
